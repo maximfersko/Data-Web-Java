@@ -1,0 +1,15 @@
+@media (max-width: 768px) {
+    .card {
+        flex: 0 0 calc(50% - 16px);
+    }
+}
+
+.card:nth-child(4n) {
+    margin-right: 0;
+}
+
+@media (max-width: 576px) {
+    .card {
+        flex: 0 0 calc(100% - 16px);
+    }
+}

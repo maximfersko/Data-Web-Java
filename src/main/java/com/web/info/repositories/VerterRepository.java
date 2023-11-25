@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface VerterRepository extends JpaRepository<Verter, Integer> {
+public interface VerterRepository extends BaseRepository<Verter, Integer> {
 }

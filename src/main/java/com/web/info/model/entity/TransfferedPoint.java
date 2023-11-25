@@ -2,11 +2,13 @@ package com.web.info.model.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
+@EqualsAndHashCode(callSuper = true)
 @Entity
 @Data
 @Table(name = "transferred_points")
-public class TransfferedPoint {
+public class TransfferedPoint extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface P2PRepository extends JpaRepository<P2P, Integer> {
+public interface P2PRepository extends BaseRepository<P2P, Integer> {
 }

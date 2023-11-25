@@ -2,11 +2,13 @@ package com.web.info.model.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
+@EqualsAndHashCode(callSuper = true)
 @Entity
 @Data
 @Table(name = "tasks")
-public class Task {
+public class Task extends BaseEntity {
 
     @Id
     @Column(name = "pk_title")

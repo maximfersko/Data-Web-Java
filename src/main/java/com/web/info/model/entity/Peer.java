@@ -5,13 +5,15 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.time.LocalDate;
 
+@EqualsAndHashCode(callSuper = true)
 @Entity
 @Data
 @Table(name = "peers")
-public class Peer {
+public class Peer extends BaseEntity {
 
     @Id
     @Column(name = "pk_nickname")

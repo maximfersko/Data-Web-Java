@@ -2,13 +2,15 @@ package com.web.info.model.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.time.LocalDate;
 
+@EqualsAndHashCode(callSuper = true)
 @Entity
 @Data
 @Table(name = "verter")
-public class Verter {
+public class Verter extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

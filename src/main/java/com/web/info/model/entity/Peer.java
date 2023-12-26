@@ -13,7 +13,7 @@ import java.time.LocalDate;
 @Entity
 @Data
 @Table(name = "peers")
-public class Peer extends BaseEntity {
+public class Peer extends BaseEntity<String> {
 
     @Id
     @Column(name = "pk_nickname")
@@ -22,4 +22,8 @@ public class Peer extends BaseEntity {
     @Column(name = "birthday")
     private LocalDate birthday;
 
+	@Override
+	public String getId() {
+		return nickname;
+	}
 }

@@ -1,14 +1,19 @@
-const btn = document.getElementById("btn");
+const cards = document.getElementsByClassName("card");
 
-btn.addEventListener('click', () => {
-    fetch('/data', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
+for (const card of cards) {
+    card.addEventListener('click', () => {
 
-    }).then((response) => response.json())
-        .then((data) => {
-            console.log(data.toString());
-        })
-});
+        const dataElm = card.querySelector("h2").textContent;
+
+        fetch('/' + dataElm, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+
+        }).then((response) => response.json())
+            .then((data) => {
+                console.log(data.toString());
+            })
+    });
+}

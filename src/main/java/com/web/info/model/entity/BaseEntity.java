@@ -1,4 +1,8 @@
 package com.web.info.model.entity;
 
-public class BaseEntity {
+import lombok.Getter;
+
+@Getter
+public class BaseEntity<T> {
+    T id;
 }
